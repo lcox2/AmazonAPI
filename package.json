@@ -1,0 +1,19 @@
+{
+  "name": "amazonapi",
+  "version": "1.0.0",
+  "description": "amazonapiofdoom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcox2/AmazonAPI.git"
+  },
+  "author": "Levi Cox, John Harper, Robert Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcox2/AmazonAPI/issues"
+  },
+  "homepage": "https://github.com/lcox2/AmazonAPI#readme"
+}
