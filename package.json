@@ -1,11 +1,7 @@
 {
   "name": "amazonapi",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "Wishlist",
-=======
-  "description": "amazonapiofdoom",
->>>>>>> 4a3cb23dd4556cf7d7c4dc29c1af3835f5557557
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,11 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/lcox2/AmazonAPI.git"
   },
-<<<<<<< HEAD
-  "author": "",
-=======
   "author": "Levi Cox, John Harper, Robert Moore",
->>>>>>> 4a3cb23dd4556cf7d7c4dc29c1af3835f5557557
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lcox2/AmazonAPI/issues"
