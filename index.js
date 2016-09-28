@@ -2,7 +2,8 @@ console.log('hello billy!');
 
 console.log('awssecretHash');
 
-var AWS = require('aws-sdk'); 
+var AWS = require('aws-sdk');
+AWS.config.loadFromPath('./config.json')
 
 var s3 = new AWS.S3(); 
 
