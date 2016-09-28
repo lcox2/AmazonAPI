@@ -1,6 +1,4 @@
 
-console.log('Lets get down to business 2');
-
 console.log('hello billy!');
 
 console.log('awssecretHash');
