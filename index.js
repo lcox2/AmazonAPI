@@ -1,5 +1,5 @@
 console.log('awssecretHash');
-
+var amazonReturn;
 // var AWS = require('aws-sdk');
 // AWS.config.loadFromPath('./config.json')
 
@@ -34,7 +34,9 @@ opHelper.execute('ItemSearch', {
     'ResponseGroup': 'ItemAttributes,Offers'
     }).then((response) => {
         console.log("Results object: ", response.results);
-        console.log("Raw response body: ", response.responseBody);
+        //console.log("Raw response body: ", response.responseBody);
+        amazonReturn = response.responseBody;
+        console.log("Results: ", response.responseBody);
     }).catch((err) => {
         console.error("Something went wrong! ", err);
     });
