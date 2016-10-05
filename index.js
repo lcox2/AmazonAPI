@@ -1,6 +1,3 @@
-console.log('Lets get down to business 2');
-
-console.log('hello billy!');
 
 console.log('awssecretHash');
 
@@ -17,15 +14,15 @@ var opHelper = new OperationHelper({
 });
 
 opHelper.execute('ItemSearch', {
-    'SearchIndex': 'Books',
-    'Keywords': 'Hard Cover Harry Potter Sorcerers Stone' ,
+    'SearchIndex': 'Electronics',
+    'Keywords': 'Intel I7' ,
     'ResponseGroup': 'ItemAttributes,Offers'
     }).then((response) => {
         console.log("Results object: ", response.results);
-        var arr = [response.result.ItemSearchResponse.Items];
+        var arr = response.result.ItemSearchResponse.Items.Item;
         // console.log("Raw response body: ", response.responseBody);
         amazonReturn = response.result.ItemSearchResponse.Items;
-        console.log(amazonReturn);
+        console.log(arr[0], );
     }).catch((err) => {
         console.error("Something went wrong! ", err);
     });
