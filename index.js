@@ -41,10 +41,11 @@ opHelper.execute('ItemSearch', {
     'ResponseGroup': 'ItemAttributes,Offers'
     }).then((response) => {
         console.log("Results object: ", response.results);
-        var arr = [response.result.ItemSearchResponse.Items];
+        var arr = response.result.ItemSearchResponse.Items.Item;
         // console.log("Raw response body: ", response.responseBody);
         amazonReturn = response.result.ItemSearchResponse.Items;
-        console.log(amazonReturn);
+        console.log(arr[0].ItemAttributes.ListPrice.FormattedPrice);
+        //console.log(amazonReturn[5]);
     }).catch((err) => {
         console.error("Something went wrong! ", err);
     });
