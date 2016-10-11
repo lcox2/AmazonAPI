@@ -14,15 +14,15 @@ var opHelper = new OperationHelper({
 });
 
 opHelper.execute('ItemSearch', {
-    'SearchIndex': 'Electronics',
-    'Keywords': 'Intel I7' ,
+    'SearchIndex': 'Books',
+    'Keywords': 'Hard Cover Harry Potter Sorcerers Stone' ,
     'ResponseGroup': 'ItemAttributes,Offers'
     }).then((response) => {
         console.log("Results object: ", response.results);
-        var arr = response.result.ItemSearchResponse.Items.Item;
+        var arr = [response.result.ItemSearchResponse.Items];
         // console.log("Raw response body: ", response.responseBody);
         amazonReturn = response.result.ItemSearchResponse.Items;
-        console.log(arr[0], );
+        console.log(amazonReturn);
     }).catch((err) => {
         console.error("Something went wrong! ", err);
     });
