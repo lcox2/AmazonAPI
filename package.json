@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/lcox2/AmazonAPI#readme",
   "dependencies": {
-    "aws-sdk": "^2.6.4"
+    "aws-sdk": "^2.6.4",
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6"
   }
 }

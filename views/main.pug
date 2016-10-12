@@ -1,0 +1,28 @@
+//- This is a comment
+
+extends layout
+
+block content
+    
+    .container
+        .jumbotron
+            h2 Wishlist Bishes
+            p WHERE DEM DREAMS OEIAEROAER
+
+    p.text-blue This should be boo text
+
+    #search.btn.btn-primary Search
+
+block scripts
+    script. 
+        $('#search').on('click', function(){
+            console.log('Fire the Torpedos')
+
+            var search = {
+                term: 'Buzz lightyear',
+                price: 20
+            };
+            $.post('/api/products/search', search, function(resp){
+                console.log(resp);
+            });
+        });
