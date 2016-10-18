@@ -15,35 +15,12 @@ block content
 
 block scripts
     script. 
-        $('ItemSearch').on('click', function(){
+        $('#search').on('click', function(){
             console.log('Fire the Torpedos')
 
-            opHelper.execute('ItemSearch', {
-                'SearchIndex': 'Books',
-                'Keywords': 'Hard Cover Harry Potter Sorcerers Stone',
-                'ResponseGroup': 'ItemAttributes,Offers'
-            }).then((response) => {
-                console.log("Results object: ", response.results);
-                var arr = response.result.ItemSearchResponse.Items.Item;
-                // console.log("Raw response body: ", response.responseBody);
-                amazonReturn = response.result.ItemSearchResponse.Items;
-                console.log(arr[0].ItemAttributes.ListPrice.FormattedPrice);
-
-
-                for (var index = 0; index < arr.length; index++) {
-                    console.log("Name: ", arr[index].ItemAttributes.Title);
-                    console.log("Id: ", arr[index].ItemAttributes.UPC);
-                    console.log("URL: ", arr[index].DetailPageURL);
-                    console.log("Category: ", arr[index].ItemAttributes.ProductGroup);
-                    if(arr[index].ItemAttributes.ListPrice != undefined)
-                    {
-                        console.log("Price: ", arr[index].ItemAttributes.ListPrice.FormattedPrice);
-                    }
-                }
-
-            }).catch((err) => {
-                console.error("Something went wrong! ", err);
-            });
+            var ItemSearch = {
+                term: 'Buzz lightyear',
+                price: 20
             };
             $.post('/api/products/search', search, function(resp){
                 console.log(resp);
