@@ -22,7 +22,7 @@ app.get('/', function(req, res){
 app.post('/api/products/search', function(req, res){
     var _search=req.body;
     console.log(_search);
-    res.render('main', {title: 'Got hem!'});
+    res.render('main', {title: 'Found This! '});
 });
 
 app.listen(port, function(){
