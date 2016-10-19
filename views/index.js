@@ -55,7 +55,7 @@ app.post('api/products/search' , function(req, res){
     'Keywords': _search.term,
     'ResponseGroup': 'ItemAttributes,Offers'
 })
-
+    var arr = response.result.ItemSearchResponse.Items.Item;
     res.send()
     res.render('main',{title:"Found" });
     });
