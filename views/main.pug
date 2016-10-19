@@ -18,11 +18,11 @@ block scripts
         $('#search').on('click', function(){
             console.log('Fire the Torpedos')
 
-            var ItemSearch = {
+            var search = {
                 term: 'Buzz lightyear',
                 price: 20
             };
-            $.post('/api/products/search', search, function(resp){
+            $.post('/api/products/search', ItemSearch, function(resp){
                 console.log(resp);
             });
         });
