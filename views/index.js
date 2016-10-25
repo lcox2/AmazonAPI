@@ -15,14 +15,40 @@ var opHelper = new OperationHelper({
 
 opHelper.execute('ItemSearch', {
     'SearchIndex': 'Books',
-    'Keywords': 'Hard Cover Harry Potter Sorcerers Stone',
+    'Keywords': 'Harry Potter',
     'ResponseGroup': 'ItemAttributes,Offers'
 }).then((response) => {
     console.log("Results object: ", response.results);
     //var arr = response.result.ItemSearchResponse.Items.Item;
     // console.log("Raw response body: ", response.responseBody);
-    amazonReturn = response.result.ItemSearchResponse.Items;
+    var arr = response.result.ItemSearchResponse.Items.Item;
+
+    function data() {
+        this.name = "Na";
+        this.id = "NA";
+        this.url = "NA";
+        this.category = "NA";
+        this.price = "NA";
+}
+    var resarr = [];
+            for (var index = 0; index < arr.length; index++){
+                resarr.push(new data());
+                resarr[index].name = ("Name: ", arr[index].ItemAttributes.Title);
+                resarr[index].id = ("Id: ", arr[index].ItemAttributes.UPC);
+                resarr[index].url = ("URL: ", arr[index].DetailPageURL);
+                resarr[index].category = ("Category: ", arr[index].ItemAttributes.ProductGroup);
+                if(arr[index].ItemAttributes.ListPrice != undefined)
+                {
+                    resarr[index].price = ("Price: ", arr[index].ItemAttributes.ListPrice.FormattedPrice);
+                }
+                else
+                {
+                    resarr[index].price = "NA";
+                 }
+            }
+
     //console.log(arr[0].ItemAttributes.ListPrice.FormattedPrice);
+    console.log(resarr[0].name)
 
 
     //for (var index = 0; index < arr.length; index++) {
@@ -34,7 +60,7 @@ opHelper.execute('ItemSearch', {
         //{
             //console.log("Price: ", arr[index].ItemAttributes.ListPrice.FormattedPrice);
         //}
-    }
+//}
 
 }).catch((err) => {
     console.error("Something went wrong! ", err);
@@ -56,6 +82,7 @@ app.post('api/products/search' , function(req, res){
     'ResponseGroup': 'ItemAttributes,Offers'
 })
     var arr = response.result.ItemSearchResponse.Items.Item;
+    var resarr;
     res.send()
     res.render('main',{title:"Found" });
     });
