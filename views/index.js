@@ -2,6 +2,7 @@
 console.log('awssecretHash');
 
 var amazonReturn;
+var app;
 
 
 var util = require('util'),
@@ -48,7 +49,7 @@ opHelper.execute('ItemSearch', {
             }
 
     //console.log(arr[0].ItemAttributes.ListPrice.FormattedPrice);
-    console.log(resarr[0].name)
+    console.log(resarr[0].name, resarr[0].price, resarr[0].url)
 
 
     //for (var index = 0; index < arr.length; index++) {
@@ -83,6 +84,24 @@ app.post('api/products/search' , function(req, res){
 })
     var arr = response.result.ItemSearchResponse.Items.Item;
     var resarr;
-    res.send()
+
+        for (var index = 0; index < arr.length; index++){
+            resarr.push(new data());
+            resarr[index].name = ("Name: ", arr[index].ItemAttributes.Title);
+            resarr[index].id = ("Id: ", arr[index].ItemAttributes.UPC);
+            resarr[index].url = ("URL: ", arr[index].DetailPageURL);
+            resarr[index].category = ("Category: ", arr[index].ItemAttributes.ProductGroup);
+            if(arr[index].ItemAttributes.ListPrice != undefined)
+            {
+                resarr[index].price = ("Price: ", arr[index].ItemAttributes.ListPrice.FormattedPrice);
+            }
+            else
+            {
+                resarr[index].price = "NA";
+            }
+            }
+
+
+    res.send(resarr)
     res.render('main',{title:"Found" });
     });
