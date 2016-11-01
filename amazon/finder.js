@@ -7,7 +7,32 @@ var opHelper = new OperationHelper({
     assocId: 'lcox2-20',
 });
 
+function test(search){
+    var deferred = Q.defer();
+    var success = true;
 
+    setTimeout(function(){
+         if(success)
+        {
+            deferred.resolve("Success");
+        }
+
+        else
+        {
+            deferred.reject("Failure");
+        }
+    }, 2000)
+       
+
+    return deferred.promise;
+}
+
+var k = test();
+k.then(function(resp){
+debugger;
+}).catch(function(err){
+debugger;
+})
 
         function finder(input)
         {
@@ -44,5 +69,6 @@ var opHelper = new OperationHelper({
                             resarr[index].price = "NA";
                         }
                     }
+        })
         }
 
