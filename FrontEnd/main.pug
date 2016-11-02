@@ -1,29 +1,27 @@
 //- This is a comment
 
 extends layout
-extends finder
 
 block content
     
     .container
         .jumbotron
-            h2 Wishlist Bishes
-            p WHERE DEM DREAMS OEIAEROAER
+            h2 Wishlist
+            p You can put your stuff here Rob
 
-    p.text-blue This should be boo text
+    p.text-blue This should be blue text
     input(type="text", name=searchin, id=searchin, value=val,autocomplete="off")
     #search.btn.btn-primary Search
 
 block scripts
     script. 
-        $('#search').on('click', function(){
+        $('#search').on('click', function(arr){
             console.log('Fire the Torpedos')
 
             var ItemSearch = {
-                term: 'Buzz lightyear',
-                price: 20
+                searchin
             };
-            $.post('/api/products/search', ItemSearch, function(resp){
+            $.post('/api/products/search', ItemSearch, function(resarr){
                 console.log(resp);
             });
         });
