@@ -1,3 +1,5 @@
+
+var q = require('q');
 var util = require('util'),
     OperationHelper = require('apac').OperationHelper;
 
@@ -8,7 +10,7 @@ var opHelper = new OperationHelper({
 });
 
 function test(search){
-    var deferred = Q.defer();
+    var deferred = q.defer();
     var success = true;
 
     setTimeout(function(){
