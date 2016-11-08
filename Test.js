@@ -8,7 +8,7 @@ var port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'pug');
-app.set('views', './FrontEnd');
+app.set('views', './amazon');
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
