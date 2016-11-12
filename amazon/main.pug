@@ -26,9 +26,15 @@ block scripts
                 else {
                     str = null;
                 }
-            $.post('https://github.com/lcox2/AmazonAPI/blob/testing/amazon/finder.js', ItemSearch, function(search){
-                console.log(resp);
+            var promise = $.getJSON('https://github.com/lcox2/AmazonAPI.git')
+
+                promise.done(function(finder) {
+                    $('body').append(finder.text);
+                });
+
+                promise.fail(function() {
+                    $('body').append('<p>Oh no, something went wrong!</p>');
+                });
             });
-        });
 
 
