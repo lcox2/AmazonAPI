@@ -15,8 +15,9 @@ block content
 
 block scripts
     script. 
-        $('#search').on('click', function(arr){
+        $('#search').on('click', function(finder){
             console.log('Fire the Torpedos')
+            
 
             var ItemSearch;
                 if (document.getElementById('input') != null) {
@@ -25,7 +26,7 @@ block scripts
                 else {
                     str = null;
                 }
-            $.post('finder.js', ItemSearch, function(finder){
+            $.post('https://github.com/lcox2/AmazonAPI/blob/testing/amazon/finder.js', ItemSearch, function(search){
                 console.log(resp);
             });
         });
