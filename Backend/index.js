@@ -14,6 +14,7 @@ var opHelper = new OperationHelper({
     assocId: 'lcox2-20',
 });
 
+
 opHelper.execute('ItemSearch', {
     'SearchIndex': 'Books',
     'Keywords': 'Harry Potter',
