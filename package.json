@@ -19,7 +19,7 @@
   "dependencies": {
     "Q": "0.0.1",
     "apac": "^2.0.2",
-    "Amazon-Provider":"https://github.com/lcox2/AmazonAPI/",
+    "Amazon-API":"https://github.com/lcox2/AmazonAPI/",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "pug": "^2.0.0-beta6",

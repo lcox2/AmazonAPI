@@ -4,7 +4,7 @@ console.log('awssecretHash');
 var amazonReturn;
 var app;
 
-var AmazonProvider = require('Amazon-Provider');
+var AmazonProvider = require('Amazon-API');
 
 var util = require('util'),
     OperationHelper = require('apac').OperationHelper;
