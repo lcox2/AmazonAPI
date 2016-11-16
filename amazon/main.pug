@@ -4,14 +4,16 @@ extends layout
 
 block content
     
-    .container
+    .search-area
         .jumbotron
-            h2 Wishlist
-            p You can put your stuff here Rob
+            h2 Search button location
+            p This is the zone for putting the search bar in
+            input(type="text", name=searchin, id=input, autocomplete="off")
+            #search.btn.btn-primary(type="submit") Search
+        h2 This is where the various products will append to
+            
 
     p.text-blue This should be blue text
-    input(type="text", name=searchin, id=input, autocomplete="off")
-    #search.btn.btn-primary(type="submit") Search
 
 block scripts
     script. 

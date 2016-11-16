@@ -3,14 +3,16 @@ html
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         title Our Wishlist Application
         style.
+            .header{height: 100px; width: 1200px; background-color: darkblue; text-align: center; align: middle; border-top-right-radius: 25px; border-top-left-radius: 25px; margin: auto;}
+            .search-area {height: 1200px; width: 1200px; background-color: lightblue; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; text-align: center; margin: auto;}
+            .jumbotron {background-color: lightgray;}
             .text-blue { color: blue; }
     body
 
-        .page-header
-            h1(style="color:red text-align:middle;") Amazon API Wishlist.
+        .header
+            h1(style="color:red;") Amazon API Wishlist
 
-        p.text-blue I think this is blue?
-            block content
+        block content
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
