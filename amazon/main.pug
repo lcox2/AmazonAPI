@@ -1,0 +1,40 @@
+//- This is a comment
+
+extends layout
+
+block content
+    
+    .container
+        .jumbotron
+            h2 Wishlist
+            p You can put your stuff here Rob
+
+    p.text-blue This should be blue text
+    input(type="text", name=searchin, id=input, autocomplete="off")
+    #search.btn.btn-primary(type="submit") Search
+
+block scripts
+    script. 
+        $('#search').on('click', function(finder){
+            console.log('Fire the Torpedos')
+            
+            var finder = new Finder();
+                if (document.getElementById('input') != null) {
+                    str = document.getElementById("input").value;
+                }
+                else {
+                    str = null;
+                }
+            var resarr = new Resarr()
+            {
+                resarr(function(resarr) {
+                    $('body').append(resarr.text);
+                });
+
+                resarr.fail(function() {
+                    $('body').append('<p>Oh no, something went wrong!</p>');
+                });
+            };
+        });
+
+
