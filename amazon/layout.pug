@@ -4,11 +4,17 @@ html
         title Our Wishlist Application
         style.
             .text-blue { color: blue; }
+            .container {margin: auto; background-color: indigo; height: 1300px; width: 900px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;}
+            .top-nav { color: white; padding: 20px; text-align: center; margin: auto; background-color: darkblue; height: 100px; width: 900px; border-top-right-radius: 15px; border-top-left-radius: 15px;}
+            .page-nav {text-align: center; border: 2px solid black; height: 75px; color: blue; padding: 10px; margin: auto; background-color: white; text-shadow: 1px 1px 1px darkblue;}
+            .search-area {padding: 15px; border-left: 2px solid black; border-right: 2px solid black; border-bottom: 2px solid black; background-color: white; margin: auto; height: 300px; text-shadow: 1px 1px 1px blue;}
+            .output-area {padding: 15px; border-left: 2px solid black; border-right: 2px solid black; border-bottom: 2px solid black; background-color: white; margin: auto; height: 800px; text-shadow: 1px 1px 1px blue;}
+            .copyright-area {padding: 40px; border-left: 2px solid black; border-right: 2px solid black; border-bottom: 2px solid black; text-align: center; background-color: white; margin: auto; text-color: white; height: 100px;}
+            .body {background-color: chocolate;}
     body
-
-        h1(style="color:red;") Amazon API Wishlist.
-
-        p.text-blue I think this is blue?
+        .body
+            .top-nav
+                h1 Amazon Wishlist
             block content
 
 

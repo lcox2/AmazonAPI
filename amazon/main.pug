@@ -5,13 +5,16 @@ extends layout
 block content
     
     .container
-        .jumbotron
-            h2 Wishlist
-            p You can put your stuff here Rob
-
-    p.text-blue This should be blue text
-    input(type="text", name=searchin, id=input, autocomplete="off")
-    #search.btn.btn-primary(type="submit") Search
+        .page-nav
+            h1 Wishlist Search and Output
+        .search-area
+            h2 Search Bar Area
+            input(type="text", name=searchin, id=input, autocomplete="off")
+            #search.btn.btn-primary(type="submit") Search
+        .output-area
+            h2 Output Area
+        .copyright-area
+            p Combined effort of John, Isaac, and Robert
 
 block scripts
     script. 
