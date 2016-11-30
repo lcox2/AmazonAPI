@@ -7,15 +7,30 @@ html
             .search-area {height: 1200px; width: 1200px; background-color: lightblue; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; text-align: center; margin: auto;}
             .jumbotron {background-color: lightgray;}
             .text-blue { color: blue; }
+            .container {margin: auto; background-color: indigo; height: 1300px; width: 900px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;}
+            .top-nav { color: white; padding: 20px; text-align: center; margin: auto; background-color: darkblue; height: 100px; width: 900px; border-top-right-radius: 15px; border-top-left-radius: 15px;}
+            .page-nav {text-align: center; border: 2px solid black; height: 75px; color: blue; padding: 10px; margin: auto; background-color: white; text-shadow: 1px 1px 1px darkblue;}
+            .search-area {padding: 15px; border-left: 2px solid black; border-right: 2px solid black; border-bottom: 2px solid black; background-color: white; margin: auto; height: 300px; text-shadow: 1px 1px 1px blue;}
+            .output-area {padding: 15px; border-left: 2px solid black; border-right: 2px solid black; border-bottom: 2px solid black; background-color: white; margin: auto; height: 800px; text-shadow: 1px 1px 1px blue;}
+            .copyright-area {padding: 40px; border-left: 2px solid black; border-right: 2px solid black; border-bottom: 2px solid black; text-align: center; background-color: white; margin: auto; text-color: white; height: 100px;}
+            .body {background-color: chocolate;}
     body
+<<<<<<< HEAD
 
         .header
             h1(style="color:red;") Amazon API Wishlist
 
         block content
+=======
+        .body
+            .top-nav
+                h1 Amazon Wishlist
+            block content
+>>>>>>> 256e2f0d54a35e3591e4272c42722181062f16f7
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.0.min.js"></script>
+    <script src="https://github.com/lcox2/AmazonAPI/blob/testing/amazon/finder.js"></script>
     block scripts

@@ -2,7 +2,6 @@
 var q = require('q');
 var util = require('util'),
     OperationHelper = require('apac').OperationHelper;
-
 var opHelper = new OperationHelper({
     awsId: 'AKIAI7LCAK3FMX7NN47Q',
     awsSecret: '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',

@@ -4,6 +4,7 @@ extends layout
 
 block content
     
+<<<<<<< HEAD
     .search-area
         .jumbotron
             h2 Search button location
@@ -14,29 +15,42 @@ block content
             
 
     p.text-blue This should be blue text
+=======
+    .container
+        .page-nav
+            h1 Wishlist Search and Output
+        .search-area
+            h2 Search Bar Area
+            input(type="text", name=searchin, id=input, autocomplete="off")
+            #search.btn.btn-primary(type="submit") Search
+        .output-area
+            h2 Output Area
+        .copyright-area
+            p Combined effort of John, Isaac, and Robert
+>>>>>>> 256e2f0d54a35e3591e4272c42722181062f16f7
 
 block scripts
     script. 
         $('#search').on('click', function(finder){
             console.log('Fire the Torpedos')
             
-
-            var ItemSearch;
+            var finder = new Finder();
                 if (document.getElementById('input') != null) {
                     str = document.getElementById("input").value;
                 }
                 else {
                     str = null;
                 }
-            var promise = $.getJSON('https://github.com/lcox2/AmazonAPI/blob/testing/amazon/finder.js')
-
-                promise.done(function(finder) {
-                    $('body').append(finder.text);
+            var resarr = new Resarr()
+            {
+                resarr(function(resarr) {
+                    $('body').append(resarr.text);
                 });
 
-                promise.fail(function() {
+                resarr.fail(function() {
                     $('body').append('<p>Oh no, something went wrong!</p>');
                 });
-            });
+            };
+        });
 
 
