@@ -93,8 +93,14 @@ function finder(input) {
 var test = finder("dildo")
 
 test.then(function(arr){
-    console.log(arr[0].name);
-    console.log(arr[0].price);
+    output-area.append(arr[0].name);
+    output-area.append(arr[0].price);
+
+    output-area.append(arr[1].name);
+    output-area.append(arr[1].price);
+
+    output-area.append(arr[2].name);
+    output-area.append(arr[2].price);
 }).catch(function(){
 
 })
