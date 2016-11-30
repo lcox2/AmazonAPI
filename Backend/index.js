@@ -4,6 +4,7 @@ console.log('awssecretHash');
 var amazonReturn;
 var app;
 
+var AmazonProvider = require('Amazon-API');
 
 var util = require('util'),
     OperationHelper = require('apac').OperationHelper;
@@ -13,6 +14,7 @@ var opHelper = new OperationHelper({
     awsSecret: 'yAHkb+MUAwyV821RjTPiAW0EZCf3gk8M+oWA+tHO',
     assocId: 'lcox2-20',
 });
+
 
 opHelper.execute('ItemSearch', {
     'SearchIndex': 'Books',

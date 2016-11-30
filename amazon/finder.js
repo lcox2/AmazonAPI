@@ -1,21 +1,35 @@
+<<<<<<< HEAD
 var Q = require("q");
+=======
+
+var q = require('q');
+>>>>>>> df4a3fce64bf0a3f478afd10c77d5b6f4b732668
 var util = require('util'),
 
     OperationHelper = require('apac').OperationHelper;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> df4a3fce64bf0a3f478afd10c77d5b6f4b732668
 var opHelper = new OperationHelper({
     awsId: 'AKIAI7LCAK3FMX7NN47Q',
     awsSecret: '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',
     assocId: 'lcox2-20',
 });
 
+<<<<<<< HEAD
 
 
 
 function finder(input) {
 
     var deferred = Q.defer();
+=======
+function test(search){
+    var deferred = q.defer();
+    var success = true;
+>>>>>>> df4a3fce64bf0a3f478afd10c77d5b6f4b732668
 
     opHelper.execute('ItemSearch', {
         'SearchIndex': 'All',
