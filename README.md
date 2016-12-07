@@ -23,7 +23,13 @@ Its located inside the finder file
 ## Searching
 ```
 amazon.finder(input){
-
+    .then(function(data){
+        console.log(data);
+        totalResult.push(data)
+    })
+        .catch(function(err){
+        console.log(err);
+    });
 }
 
 ```
